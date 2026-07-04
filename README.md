@@ -17,4 +17,4 @@ This repository contains my AI learning journey during the 2026 summer vacation.
 
 ---
 
-Made by Jingu
+Made by skywardforge
