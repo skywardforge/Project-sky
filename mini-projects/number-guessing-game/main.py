@@ -1,22 +1,21 @@
 
 import random
 # 난이도 선택
-user_input = input("난이도를 선택하세요.\n" 
-"1. Easy\n" 
-"2. Normal\n" 
-"3. Hard\n"
-"선택: ")
+def choose_difficulty():
+    while True:
+        difficulty = input("난이도를 선택하세요 (1: 쉬움, 2: 보통, 3: 어려움): ").strip()
+        if difficulty == '1':
+            return 50
+        elif difficulty == '2':
+            return 100
+        elif difficulty == '3':
+            return 200
+        else:
+            print("잘못된 입력입니다. 1, 2, 또는 3을 입력해주세요.")
 
-if user_input == "1":
-    max_number = 50
-elif user_input == "2":
-    max_number = 100
-elif user_input == "3":
-    max_number = 200
-else:
-    print("잘못된 입력입니다. 기본 난이도(Normal)로 설정됩니다.")
-    max_number = 100
+
 # 컴퓨터가 1부터 max_number 사이의 숫자를 하나 정합니다.
+max_number = choose_difficulty()
 answer = random.randint(1, max_number)
 
 # 사용자가 몇 번 시도했는지 저장할 변수입니다.
